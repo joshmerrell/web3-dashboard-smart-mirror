@@ -1,0 +1,86 @@
+/* Grid */
+.layout {
+  /* Set your own grid   */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 400px;
+  grid-column-gap: 1em;
+}
+
+/* Widgets */
+section {
+  background: rgba(211, 211, 211, 0.5);
+  padding: 1em;
+  
+  /* Relative Parent. Absolute Child */
+  position: relative;
+}
+
+/* Time */
+.time {
+}
+
+.hours {
+}
+
+.minutes {
+}
+
+.seconds {
+}
+
+.amOrPM {
+  
+}
+
+/* Date */
+.date {
+  
+}
+
+.month {
+}
+
+.dayOfMonth {
+}
+
+.year {
+}
+
+.dayOfWeek {
+}
+
+/* Weather */
+.weather {
+  
+}
+
+.city {
+  
+}
+
+.temp {
+  
+}
+
+.weather img {
+  
+}
+
+/* Smart Mirror */
+video { 
+  
+  /* Position video      */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Stretch to fill viewport */
+    width: 100vw;
+    height: 100vh;
+    /* stack behind content     */
+    z-index: -1;
+    /* fill background with video    */
+  object-fit: cover;
+  object-position: center;
+  
+}
