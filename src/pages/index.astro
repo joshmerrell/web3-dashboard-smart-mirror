@@ -1,0 +1,17 @@
+---
+import DateComponent from "../components/DateComponent.astro";
+import TimeWidget from "../components/TimeWidget.astro";
+import WeatherWidget from "../components/WeatherWidget.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+	<!-- Weather -->
+	<WeatherWidget />
+
+	<!-- Time -->
+	<TimeWidget />
+
+	<!--  Date -->
+	<DateComponent />
+</BaseLayout>

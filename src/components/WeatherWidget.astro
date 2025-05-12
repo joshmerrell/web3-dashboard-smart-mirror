@@ -1,0 +1,10 @@
+---
+import { city, errorMessage, iconURL, weatherName, weatherDescription, temperature, feelsLike, humidity } from "../scripts/weather";
+---
+<section class="weather">
+    {errorMessage?<p class="error">{errorMessage}</p>:
+    <h1>Weather for {city}</h1>
+    <p>{weatherName}/{weatherDescription}</p>
+    <img src={iconURL} alt="Placeholder">
+    <p>Temperature/Feels like: <data value={`${temperature}`} class="temp">{temperature}&#8457;</data> / <data value={`${feelsLike}`} class="temp">{feelsLike}&#8457;</data></p>}
+</section>

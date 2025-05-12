@@ -1,7 +1,7 @@
 /************
 Static Data
 ************/
-const allTheMonths = [
+export const allTheMonths = [
   "January",
   "February",
   "March",
@@ -15,7 +15,7 @@ const allTheMonths = [
   "November",
   "December"
 ];
-const allTheDays = [
+export const allTheDays = [
   "Sunday",
   "Monday",
   "Tuesday",
@@ -34,37 +34,42 @@ const dateNow = new Date();
 console.log( dateNow );
 
 const gotMonth = dateNow.getMonth();
+
+export const gotMonthName = allTheMonths[gotMonth];
+
 // Get current day of the month
-let gotDayOfMonth = dateNow.getDate();
+export const gotDayOfMonth = dateNow.getDate();
 // Get current year
-const gotYear = dateNow.getFullYear();
+export const gotYear = dateNow.getFullYear();
 // Get current day of the week
 const gotDayOfWeek = dateNow.getDay();
 
+export const gotDayOfWeekName = allTheDays[gotDayOfWeek];
+
 // Check-Check: Is the data correct? 
-console.log(gotMonth, gotDayOfMonth, gotYear, gotDayOfWeek);
+// console.log(gotMonth, gotDayOfMonth, gotYear, gotDayOfWeek);
 
 /************
 Get DOM Elements
 ************/
 // Get the month
-const month = document.querySelector(".month");
+// const month = document.querySelector(".month");
 // Get day of the month
-const dayOfMonth = document.querySelector(".dayOfMonth");
+// const dayOfMonth = document.querySelector(".dayOfMonth");
 // Get year
-const year = document.querySelector('.year');
+// const year = document.querySelector('.year');
 // Get Day of Week
-const dayOfWeek = document.querySelector('.dayOfWeek');
+// const dayOfWeek = document.querySelector('.dayOfWeek');
 
 
 /************
 Set DOM Elements
 ************/
 // Set the month
-month.innerText = allTheMonths[gotMonth];
+// month.innerText = allTheMonths[gotMonth];
 // Set day of the month
-dayOfMonth.innerText = gotDayOfMonth;
+// dayOfMonth.innerText = gotDayOfMonth;
 // Set the year
-year.innerText = gotYear;
+// year.innerText = gotYear;
 // Set the day of the week
-dayOfWeek.innerText = allTheDays[gotDayOfWeek];
+// dayOfWeek.innerText = allTheDays[gotDayOfWeek];

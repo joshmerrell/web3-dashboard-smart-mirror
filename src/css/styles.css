@@ -1,0 +1,78 @@
+:root {
+    --widget-bg: hsla(0, 0%, 83%, 0.5);
+    --weather-bg: hsla(197, 100%, 82%, 0.5);
+    --time-bg: hsla(36, 100%, 70%, 0.5);
+    --date-bg: hsla(281, 100%, 73%, 0.5);
+    --widget-border: hsla(0, 0%, 0%, 0.5);
+}
+
+/* Grid */
+.layout {
+    /* Set your own grid   */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 400px);
+    /* grid-column-gap: 1em;
+    grid-row-gap: 1em; */
+    width: 70%;
+    height: 70%;
+    max-width: 1500px;
+    max-height: 900px;
+    margin: auto;
+}
+
+/* Widgets */
+section {
+    background: var(--widget-bg);
+    padding: 1em;
+  
+    /* Relative Parent. Absolute Child */
+    position: relative;
+
+    place-content: center;
+    text-align: center;
+    border: 1em solid;
+    border-color: var(--widget-border);
+}
+
+.weather {
+    grid-column: span 2;
+    background-color: var(--weather-bg);
+    border-bottom-width: 0.5em;
+}
+
+.time, .date {
+    border-top-width: 0.5em;
+}
+
+.time {
+    background-color: var(--time-bg);
+    border-right-width: 0.5em;
+}
+
+.date {
+    background-color: var(--date-bg);
+    border-left-width: 0.5em;
+}
+
+.error {
+    color: red;
+    padding: 1em;
+    font-weight: bold;
+}
+
+/* Smart Mirror */
+video { 
+    /* Position video */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Stretch to fill viewport */
+    width: 100vw;
+    height: 100vh;
+    /* stack behind content */
+    z-index: -1;
+    /* fill background with video */
+    object-fit: cover;
+    object-position: center;
+}
