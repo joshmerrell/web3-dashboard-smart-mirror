@@ -21,10 +21,9 @@ fetch(url)
   
   // Template to output
   const template = `
-    <h1>Weather</h1>
-    <data value="${data.name}" class="city">${data.name}</data>
-    <data value="${data.main.temp}" class="temp">${data.main.temp}&#8457;</data>
+    <h1>Weather for ${data.name}</h1>
     <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="Placeholder">
+    <p>Temperature/Feels like: <data value="${data.main.temp}" class="temp">${data.main.temp}&#8457;</data> / <data value="${data.main.feels_like}" class="temp">${data.main.feels_like}&#8457;</data></p>
   `;
   
   // Insert dynamic template to container
