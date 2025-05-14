@@ -12,5 +12,13 @@ if (navigator.mediaDevices.getUserMedia) {
 	  video: true
 	})
 	.then((stream) => (video.srcObject = stream))
-	.catch((error) => console.log(error));
+	.catch((error) => {
+		console.log(error);
+		const golScript = document.createElement("script");
+		golScript.src = "/js/gol.js";
+		golScript.onload = () => {
+			console.log("Game of Life script loaded.");
+		};
+		document.body.appendChild(golScript);
+	});
 }

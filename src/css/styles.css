@@ -91,7 +91,7 @@ section {
 }
 
 /* Smart Mirror */
-video { 
+video, canvas#circles { 
     /* Position video */
     position: fixed;
     top: 0;
@@ -104,6 +104,10 @@ video {
     /* fill background with video */
     object-fit: cover;
     object-position: center;
+}
+
+canvas#circles {
+    filter: blur(40px);
 }
 
 @media screen and (max-width: 925px) {
