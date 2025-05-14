@@ -16,12 +16,13 @@ import "../css/styles.css";
         <link rel="manifest" href="favicons/site.webmanifest" />
 
         <script type="text/javascript" src="/js/time.js"></script>
+        <script type="text/javascript" src="/js/webcam.js" defer></script>
         <!-- Normalize CSS Base -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     </head>
     <body>
         <!-- Webcam Video -->
-        <video autoplay></video>
+        <video autoplay disablepictureinpicture></video>
 
         <main class="layout">
             <slot />

@@ -8,6 +8,7 @@
     --widget-border: lab(0% 0 0 / 0.5);
     --border-radius: 3em;
     --border-width: 1em;
+    --half-width: calc(var(--border-width) / 2);
 }
 
 body {
@@ -44,17 +45,17 @@ section {
 .weather {
     grid-column: span 2;
     background-color: var(--weather-bg);
-    border-bottom-width: calc(var(--border-width) / 2);
+    border-bottom-width: var(--half-width);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 .time, .date {
-    border-top-width: calc(var(--border-width) / 2);
+    border-top-width: var(--half-width);
 }
 
 .time {
     background-color: var(--time-bg);
-    border-right-width: calc(var(--border-width) / 2);
+    border-right-width: var(--half-width);
     border-bottom-left-radius: var(--border-radius);
 
     time {
@@ -68,7 +69,7 @@ section {
 
 .date {
     background-color: var(--date-bg);
-    border-left-width: calc(var(--border-width) / 2);
+    border-left-width: var(--half-width);
     border-bottom-right-radius: var(--border-radius);
 }
 
@@ -81,7 +82,7 @@ section {
 /* Smart Mirror */
 video { 
     /* Position video */
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     /* Stretch to fill viewport */
@@ -105,7 +106,7 @@ video {
     .time {
         grid-column: span 1;
         border-bottom-left-radius: 0;
-        border-bottom-width: calc(var(--border-width) / 2);
+        border-bottom-width: var(--half-width);
         border-right-width: var(--border-width);
     }
     .date {
