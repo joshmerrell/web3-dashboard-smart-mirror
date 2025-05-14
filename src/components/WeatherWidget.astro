@@ -1,5 +1,5 @@
 ---
-import { city, errorMessage, iconURL, weatherName, weatherDescription, temperature, feelsLike, humidity } from "../scripts/weather";
+import { city, errorMessage, iconURL, weatherName, weatherDescription, temperature, feelsLike, humidity, sunriseAt, sunsetAt } from "../scripts/weather";
 ---
 <section class="weather">
     {errorMessage?<p class="error">{errorMessage}</p>:
@@ -7,4 +7,7 @@ import { city, errorMessage, iconURL, weatherName, weatherDescription, temperatu
     <p>{weatherName}/{weatherDescription}</p>
     <img src={iconURL} alt="Placeholder">
     <p>Temperature/Feels like: <data value={`${temperature}`} class="temp">{temperature}&#8457;</data> / <data value={`${feelsLike}`} class="temp">{feelsLike}&#8457;</data></p>}
+    <p>Humidity: {humidity}%</p>
+    <p>Sunrise at: {sunriseAt}</p>
+    <p>Sunset at: {sunsetAt}</p>
 </section>

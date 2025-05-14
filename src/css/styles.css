@@ -1,11 +1,12 @@
 @import url('https://fontlibrary.org//face/segment7');
 
 :root {
-    --widget-bg: hsla(0, 0%, 83%, 0.5);
-    --weather-bg: hsla(197, 100%, 82%, 0.5);
-    --time-bg: hsla(36, 100%, 70%, 0.5);
-    --date-bg: hsla(281, 100%, 73%, 0.5);
-    --widget-border: lab(0% 0 0 / 0.5);
+    --opacity: 0.8;
+    --widget-bg: hsla(0, 0%, 83%, var(--opacity));
+    --weather-bg: hsla(197, 100%, 82%, var(--opacity));
+    --time-bg: hsla(36, 100%, 70%, var(--opacity));
+    --date-bg: hsla(281, 100%, 73%, var(--opacity));
+    --widget-border: lab(0% 0 0 / var(--opacity));
     --border-radius: 3em;
     --border-width: 1em;
     --half-width: calc(var(--border-width) / 2);
@@ -53,6 +54,12 @@ section {
     border-top-width: var(--half-width);
 }
 
+.weather p, .date data {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-family: sans-serif;
+}
+
 .time {
     background-color: var(--time-bg);
     border-right-width: var(--half-width);
@@ -71,6 +78,10 @@ section {
     background-color: var(--date-bg);
     border-left-width: var(--half-width);
     border-bottom-right-radius: var(--border-radius);
+}
+
+.date :not(h1) {
+    font-size: 1.5em;
 }
 
 .error {
@@ -95,7 +106,7 @@ video {
     object-position: center;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 925px) {
     .layout {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(4, 400px);
