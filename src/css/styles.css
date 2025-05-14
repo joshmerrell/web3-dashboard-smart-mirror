@@ -1,9 +1,11 @@
+@import url('https://fontlibrary.org//face/segment7');
+
 :root {
     --widget-bg: hsla(0, 0%, 83%, 0.5);
     --weather-bg: hsla(197, 100%, 82%, 0.5);
     --time-bg: hsla(36, 100%, 70%, 0.5);
     --date-bg: hsla(281, 100%, 73%, 0.5);
-    --widget-border: hsla(0, 0%, 0%, 0.5);
+    --widget-border: lab(0% 0 0 / 0.5);
     --border-radius: 3em;
     --border-width: 1em;
 }
@@ -14,7 +16,6 @@ body {
 
 /* Grid */
 .layout {
-    /* Set your own grid   */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 400px);
@@ -55,6 +56,14 @@ section {
     background-color: var(--time-bg);
     border-right-width: calc(var(--border-width) / 2);
     border-bottom-left-radius: var(--border-radius);
+
+    time {
+        font-size: 5em;
+        font-family: monospace;
+    }
+    data.hours, data.minutes, data.seconds, data.amOrPM {
+        font-family: 'Segment7', monospace;
+    }
 }
 
 .date {
