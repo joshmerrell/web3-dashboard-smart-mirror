@@ -24,3 +24,4 @@ All commands are run from the root of the project, from a terminal:
 ## Citations
 * [Original Template](https://github.com/ewuweblab/dashboard-widgets-smart-mirror)
 * [Segment7](https://fontlibrary.org/en/font/segment7)
+* Lucide for favicon
